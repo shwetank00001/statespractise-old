@@ -1,0 +1,13 @@
+* {
+    box-sizing: border-box;
+    background-color: rgb(44, 43, 43);
+}
+
+.box{
+    height: 300px;
+    width: 300px;
+    border: 2px solid black; 
+    border-radius: 10px;
+    display: inline-block;
+    margin: 10px;
+}
