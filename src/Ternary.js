@@ -14,6 +14,11 @@ export default function Ternary() {
         })
     }
 
+    // function flipValue(){
+    //     //     setValue((item) => !item)
+    //     // }
+        
+
     return(
         <div className="state">
             <h1 className="state--title">Do I feel like going out tonight?</h1>

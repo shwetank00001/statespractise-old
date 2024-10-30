@@ -2,23 +2,24 @@ import React from 'react'
 
 const Things = () => {
 
-    const [data, setData]  = React.useState(['item 1' ,'item 2'])
+    const [data, setData ] = React.useState(['Thing 1', ' Thing 2'])
 
-    const ele = data.map(function(item){
-        return(item)
-    })
-
-    function addItem(){
+    function add(){
         setData(function(item){
-            return(
-                [...item, `item ${data.length+1},`]
-            )
+            return([
+                ...item,
+                ` Thing ${data.length + 1}`
+            ])
         })
     }
+
+
   return (
     <div>
-        {ele}
-        <button onClick={addItem}>ADD ITEM</button>
+        <h2>Add a thing</h2>
+        <button onClick={add}>Here</button>
+
+        <h4>{data}</h4>
     </div>
   )
 }
