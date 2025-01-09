@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-// import Ternary from './Ternary'
-import Things from './Things'
+import ThingsMap from './ThingsMap';
 
-ReactDOM.render(<Things />, document.getElementById("root"));
+ReactDOM.render(<ThingsMap />, document.getElementById("root"));
