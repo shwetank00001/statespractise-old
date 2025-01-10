@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Important from './Important';
-import CountLatest from './CountLatest';
+import GoingOut from './GoingOut';
 
 
-ReactDOM.render(<CountLatest />, document.getElementById("root"));
+ReactDOM.render(<GoingOut />, document.getElementById("root"));
