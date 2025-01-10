@@ -1,23 +1,20 @@
 import React from 'react'
 
 const ThingsMap = () => {
-    const thingsArray = ["Things 1", "Things 2"]
+    const [things, setThings] = React.useState(['Things 1', 'Things 2'])
 
-    const ele = thingsArray.map(function(item){
-        return (
-            <p>{item}</p>
-        )
+    const ele = things.map(function(item){
+        return <p key={item}>{item}</p>
     })
-
-    function addThing(){
-        const newData = `Things ${thingsArray.length + 1}`
-        thingsArray.push(newData)
-        console.log(thingsArray)
+    function addThings(){
+        setThings(function(item){
+            return [...item, `Things ${things.length + 1}`]
+        })
     }
-
   return (
-    <div>{ele}
-        <button onClick={addThing}>Click to add a thing</button>
+    <div>
+        {ele}
+        <button onClick={addThings}>Add</button>
     </div>
   )
 }

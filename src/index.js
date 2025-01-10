@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import GoingOut from './GoingOut';
+import ThingsMap from './ThingsMap'
 
 
-ReactDOM.render(<GoingOut />, document.getElementById("root"));
+ReactDOM.render(<ThingsMap />, document.getElementById("root"));
