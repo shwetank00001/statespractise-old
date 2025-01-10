@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import ThingsMap from './ThingsMap';
+import Important from './Important';
+import CountLatest from './CountLatest';
 
-ReactDOM.render(<ThingsMap />, document.getElementById("root"));
+
+ReactDOM.render(<CountLatest />, document.getElementById("root"));
