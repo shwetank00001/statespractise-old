@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import ThingsMap from './ThingsMap'
+import ObjectsInReact from './ObjectsInReact'
 
-
-ReactDOM.render(<ThingsMap />, document.getElementById("root"));
+ReactDOM.render(<ObjectsInReact />, document.getElementById("root"));
