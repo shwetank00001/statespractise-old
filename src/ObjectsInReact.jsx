@@ -2,24 +2,27 @@ import React from "react"
 import avatar from "./user.png"
 import starFilled from "./star-filled.png"
 import starEmpty from "./star-empty.png"
+import './Obj.css'
 
 export default function App() {
     const [contact, setContact] = React.useState({
-        firstName: "John",
-        lastName: "Doe",
+        firstName: "Shwetank",
+        lastName: "Mishra",
         phone: "+1 (212) 555-1212",
         email: "itsmyrealname@example.com",
-        isFavorite: false
+        isFavorite: true
     })
-    /**
-     * Challenge: Fill in the values in the markup
-     * using the properties of our state object above
-     * (Ignore `isFavorite` for now)
-     */
 
     function toggleFavorite() {
         console.log("Toggle Favorite")
+        setContact(function(item){
+            return {
+                ...item, isFavorite : !item.isFavorite
+            }
+        })
     }
+
+    let starImg = contact.isFavorite ? starFilled : starEmpty
 
     return (
         <main>
@@ -36,16 +39,16 @@ export default function App() {
                         className="favorite-button"
                     >
                         <img
-                            src={starEmpty}
+                            src={starImg}
                             alt="empty star icon"
                             className="favorite"
                         />
                     </button>
                     <h2 className="name">
-                        John Doe
+                        {contact.firstName} {contact.lastName}
                     </h2>
-                    <p className="contact">+1 (212) 555-1212</p>
-                    <p className="contact">itsmyrealname@example.com</p>
+                    <p className="contact">{contact.phone}</p>
+                    <p className="contact">{contact.email}</p>
                 </div>
 
             </article>
