@@ -5,6 +5,12 @@ import starEmpty from "./star-empty.png"
 import './Obj.css'
 
 export default function App() {
+
+    let x = 5;
+    function abx(){
+        console.log("hoisitng")
+    }
+    abx()
     const [contact, setContact] = React.useState({
         firstName: "Shwetank",
         lastName: "Mishra",
@@ -17,7 +23,8 @@ export default function App() {
         console.log("Toggle Favorite")
         setContact(function(item){
             return {
-                ...item, isFavorite : !item.isFavorite
+                ...item,
+                isFavorite: !item.isFavorite
             }
         })
     }
@@ -52,6 +59,7 @@ export default function App() {
                 </div>
 
             </article>
+            
         </main>
     )
 }
