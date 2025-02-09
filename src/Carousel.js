@@ -23,8 +23,7 @@ const Carousel = () => {
             setImgIndex(0)
         }
         else setImgIndex(function(index){
-            setImgIndex(index + 1)
-   
+            return index = index + 1
         })
     }
 
