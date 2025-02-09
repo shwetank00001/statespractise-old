@@ -10,6 +10,18 @@ const Carousel = () => {
 
     const [imgIndex, setIndex] = React.useState(0)
 
+    // To move carousel after 5 seconds 
+    // this return here will cancel the let timer whenever this effect is called and reset timer to 0
+    React.useEffect( ()=> {
+        let timer = setTimeout(() =>{
+            handleNext();
+        },5000)
+
+        return () => {
+            clearTimeout(timer)
+        }
+    }, [imgArray])
+
     const handleNext = function(){
         if( imgIndex === imgArray.length - 1){
             setIndex(0)
